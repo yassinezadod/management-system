@@ -25,7 +25,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="logo">
-                                            <h1>Name Store</h1>
+                                            <h1>Yassine IT</h1>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
@@ -60,10 +60,10 @@
                                     </div>
                                     <div class="col-sm-6 text-end mb-50">
                                         <h4 class="inv-title-1">Store</h4>
-                                        <p class="inv-from-1">Name Store</p>
-                                        <p class="inv-from-1">(+62) 123 123 123</p>
-                                        <p class="inv-from-1">email@example.com</p>
-                                        <p class="inv-from-2">Cirebon, Jawa Barat, Indonesia</p>
+                                        <p class="inv-from-1">Yassine IT</p>
+                                        <p class="inv-from-1">(+212) 06 417 221 81</p>
+                                        <p class="inv-from-1">yassine@gmail.com</p>
+                                        <p class="inv-from-2">Agadir Maroc</p>
                                     </div>
                                 </div>
                             </div>
