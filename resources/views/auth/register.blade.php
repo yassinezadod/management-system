@@ -13,9 +13,9 @@
 
         <x-input name="username" :value="old('username')" placeholder="Your username" required="true"/>
 
-        <x-input name="password" :value="old('password')" placeholder="Password" required="true"/>
+        <x-input name="password" :value="old('password')" placeholder="Password" type="Password" required="true"/>
 
-        <x-input name="password_confirmation" :value="old('password_confirmation')" placeholder="Password confirmation" required="true" label="Password Confirmation"/>
+        <x-input name="password_confirmation" :value="old('password_confirmation')" placeholder="Password confirmation" type="Password" required="true" label="Password Confirmation"/>
 
         <div class="mb-3">
             <label class="form-check">
