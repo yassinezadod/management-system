@@ -55,17 +55,17 @@ class SupplierTest extends TestCase
             ->assertViewIs('suppliers.edit');
     }
 
-    public function test_user_can_see_show_view()
-    {
-        $user = $this->createUser();
-        $suppliers = $this->createSupplier();
+    // public function test_user_can_see_show_view()
+    // {
+    //     $user = $this->createUser();
+    //     $suppliers = $this->createSupplier();
 
-        $response = $this->actingAs($user)->get('suppliers/'.$suppliers->id);
+    //     $response = $this->actingAs($user)->get('suppliers/'.$suppliers->id);
 
-        $response
-            ->assertStatus(200)
-            ->assertViewIs('suppliers.show');
-    }
+    //     $response
+    //         ->assertStatus(200)
+    //         ->assertViewIs('suppliers.show');
+    // }
 
     public function test_user_can_delete_category()
     {

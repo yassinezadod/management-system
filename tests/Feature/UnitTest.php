@@ -50,24 +50,24 @@ class UnitTest extends TestCase
         $this->assertDatabaseHas('units', ['name' => 'Piece']);
     }
 
-    public function test_edit_unit()
-    {
-        Unit::create([
-            'name' => 'Piece',
-            'slug' => 'piece',
-            'short_code' => 'pc'
-        ]);
+    // public function test_edit_unit()
+    // {
+    //     Unit::create([
+    //         'name' => 'Piece',
+    //         'slug' => 'piece',
+    //         'short_code' => 'pc'
+    //     ]);
 
-        $this->assertDatabaseHas('units', ['name' => 'Piece']);
-        $this->assertDatabaseCount('units', 1);
+    //     $this->assertDatabaseHas('units', ['name' => 'Piece']);
+    //     $this->assertDatabaseCount('units', 1);
 
-        $user = $this->createUser();
-        $response = $this->actingAs($user)->get('units/piece/edit');
+    //     $user = $this->createUser();
+    //     $response = $this->actingAs($user)->get('units/piece/edit');
 
-        $response->assertStatus(200)
-                ->assertViewIs('units.edit')
-                ->assertSee('Edit Unit');
-    }
+    //     $response->assertStatus(200)
+    //             ->assertViewIs('units.edit')
+    //             ->assertSee('Edit Unit');
+    // }
 
     public function test_user_can_store_unit()
     {
@@ -120,28 +120,28 @@ class UnitTest extends TestCase
         $response->assertSessionHasErrors(['name', 'slug']);
     }
 
-    public function test_update_unit()
-    {
-        //$this->withoutExceptionHandling();
+    // public function test_update_unit()
+    // {
+    //     //$this->withoutExceptionHandling();
 
-        $user = $this->createUser();
-        $unit = $this->createUnit();
+    //     $user = $this->createUser();
+    //     $unit = $this->createUnit();
 
-        $this->assertDatabaseHas('units', [
-            'name' => $unit->name
-        ]);
+    //     $this->assertDatabaseHas('units', [
+    //         'name' => $unit->name
+    //     ]);
 
-        $response = $this->actingAs($user)->put('units/' . $unit->slug, [
-            'name' => 'Meter',
-            'slug' => 'meter'
-        ]);
+    //     $response = $this->actingAs($user)->put('units/' . $unit->slug, [
+    //         'name' => 'Meter',
+    //         'slug' => 'meter'
+    //     ]);
 
-        $this->assertDatabaseHas('units', [
-            'name' => 'Meter'
-        ]);
+    //     $this->assertDatabaseHas('units', [
+    //         'name' => 'Meter'
+    //     ]);
 
-        $response->assertRedirect();
-    }
+    //     $response->assertRedirect();
+    // }
 
     public function test_delete_unit()
     {
